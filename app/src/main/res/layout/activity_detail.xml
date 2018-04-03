@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/material_layout_keylines_screen_edge_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/material_layout_keylines_screen_edge_margin"
+    android:padding="@dimen/detail_activity_padding"
+    tools:context="com.example.android.constantinenews.DetailActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/article_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_marginBottom="@dimen/imageview_margin_bottom"
+                android:contentDescription="@string/photo_related_article"/>
+
+            <TextView
+                android:id="@+id/article_title"
+                style="?android:attr/textAppearanceLarge"
+                android:fontFamily="sans-serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/title_margin_bottom"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/article_author"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="left"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/article_date"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/article_body"
+                style="?android:attr/textAppearanceMedium"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/material_component_floating_action_button_margin"
+        android:layout_marginRight="@dimen/material_component_floating_action_button_margin_right"
+        android:clickable="true"
+        android:contentDescription="@string/action_share"
+        android:src="@drawable/ic_share_black_24dp"
+        app:elevation="@dimen/floating_action_button_elevation"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        android:layout_gravity="end|bottom" />
+</android.support.constraint.ConstraintLayout>

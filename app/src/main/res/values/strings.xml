@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Constantine News</string>
+
+    <string name="pref_update_time_key" translatable="false">update-time</string>
+
+    <string name="pref_first_time_key" translatable="false">first-time</string>
+
+    <string name="photo_related_article">Photo related to the article</string>
+
+    <string name="action_share">Share</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+</resources>
